@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio do Restaurante</title>
+    <style>
+        /* Estilizando o texto com uma classe padrão */
+        .texto-dinamico {
+            font-size: 18px;
+            transition: color 10s ease;
+            /* Adicionando uma transição suave para a mudança de cor */
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="Mexico.css">
+
+</head>
+
+<body>
+
+    <header>
+
+
+        <ul>
+            <p id="textoGradienteRGB" class="texto-gradient-rgb">MEXICO</p>
+            <p id="textoGradientePorLetra" class="gradiente-por-letra">temos os melhores ingredentes
+            </p>
+            </h1>
+            <script>
+                function atualizarCorGradientePorLetra() {
+                    var elementoTexto = document.getElementById('textoGradientePorLetra');
+                    var tempo = new Date().getTime();
+                    var letras = elementoTexto.innerText.split('');
+
+                    for (var i = 0; i < letras.length; i++) {
+                        var verde = Math.sin(tempo * 0.002 + i) * 127 + 128;
+                        var pao = Math.sin(tempo * 0.002 + i + 2) * 127 + 128;
+                        var verde = Math.sin(tempo * 0.002 + i + 4) * 127 + 128;
+
+                        var corRGB = `rgb(${Math.floor(verde)}, ${Math.floor(pao)}, ${Math.floor(verde)})`;
+
+                        letras[i] = `<span style="color: ${corRGB};">${letras[i]}</span>`;
+                    }
+
+                    elementoTexto.innerHTML = letras.join('');
+                }
+
+                setInterval(atualizarCorGradientePorLetra, 30); // Atualizar a cor a cada 30 milissegundos
+            </script>
+
+
+            <script>
+                function atualizarCorRGB() {
+                    var elementoTexto = document.getElementById('textoGradienteRGB');
+                    var tempo = new Date().getTime();
+
+                    var pao = Math.sin(tempo * 0.002) * 127 + 128;
+                    var verde = Math.sin(tempo * 0.002 + 2) * 127 + 128;
+                    var verde = Math.sin(tempo * 0.002 + 4) * 127 + 128;
+
+                    var corRGB = `rgb(${Math.floor(pao)}, ${Math.floor(verde)}, ${Math.floor(pao)})`;
+
+                    elementoTexto.style.color = corRGB;
+                }
+
+                setInterval(atualizarCorRGB, 30); // Atualizar a cor a cada 30 milissegundos
+
+
+            </script>
+            <p><a href="cardapio.html">Cardapio</a>.</p>
+
+        </ul>
+
+
+        </nav>
+    </header>
+
+
+
+    <img class="bandeiras" src="Tortilla.jpg" alt="Bandeira do Brasil" width="350">
+    <hr>
+    <nav>
+        <hr>
+    </nav>
+
+    <img class="bandeiras" src="Chili com carne.png" alt="Bandeira do Brasil" width="350">
+    <hr>
+    <nav>
+        <hr>
+    </nav>
+
+    <img class="bandeiras" src="Quesadilla.jpg" alt="Bandeira do Brasil" width="350">
+    <hr>
+    <nav>
+        <hr>
+    </nav>
+
+    <img class="bandeiras" src="Tacos.avif" alt="Bandeira do Brasil" width="350">
+    <hr>
+    <nav>
+        <hr>
+    </nav>
+
+    <header>
+        <h1>Sobremesas</h1>
+        <nav>
+            <ul>
+                <li><a href="#entradas">Aprveita nossa Sobremesas saborosas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <img class="bandeiras" src="" alt="Bandeira do Brasil" width="350">
+    <hr>
+    <nav>
+        <HR>
+    </nav>
+
+    <img class="bandeiras" src="" alt="Bandeira do Brasil" width="350">
+    <hr>
+    <nav>
+        <HR>
+    </nav>
+
+
+
+</body>
+
+</html>
